@@ -7,21 +7,36 @@ public class Paddle : MonoBehaviour {
 	[SerializeField]
 	float speed;
 
-	string input;
+	private string input;
+	private float height;
 
-	// Use this for initialization
-	void Start () {
-		
+	void Start() {
+		height = GetComponent<Collider2D>().bounds.size.y;
 	}
 
+	// Constructor
 	public void Init(string player) {
+
+		// Set paddle to player
 		input = player;
+
+		// Change paddle name to player name
 		transform.name = player;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		// Get velocity based on input
 		float velocity = Input.GetAxis(input) * Time.deltaTime * speed;
+
+		// Clamp movement to screen space
+		if ((transform.position.y < GameManager.bottomLeft.y + height / 2 && velocity < 0) ||
+			(transform.position.y > GameManager.topRight.y - height / 2 && velocity > 0)) {
+			velocity = 0;
+		}
+
+		// Move paddle
 		transform.Translate(velocity * Vector2.up);
 	}
 }
