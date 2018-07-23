@@ -32,8 +32,8 @@ public class Paddle : MonoBehaviour {
 		float velocity = Input.GetAxis(input) * Time.deltaTime * speed;
 
 		// Clamp movement to screen space
-		if ((transform.position.y < GameManager.bottomLeft.y + height / 2 && velocity < 0) ||
-			(transform.position.y > GameManager.topRight.y - height / 2 && velocity > 0)) {
+		if ((transform.position.y < GameManager.instance.bottomLeft.y + height / 2 && velocity < 0) ||
+			(transform.position.y > GameManager.instance.topRight.y - height / 2 && velocity > 0)) {
 			velocity = 0;
 		}
 

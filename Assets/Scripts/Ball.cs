@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+		direction = new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
 		direction = direction.normalized * speed;
 	}
 	
@@ -19,20 +19,20 @@ public class Ball : MonoBehaviour {
 	void Update () {
 		transform.Translate (direction * speed * Time.deltaTime);
 
-		if (transform.position.y < GameManager.bottomLeft.y && direction.y < 0) {
+		if (transform.position.y < GameManager.instance.bottomLeft.y && direction.y < 0) {
 			direction.y = -direction.y;
 		}
-		if (transform.position.y > GameManager.topRight.y && direction.y > 0 ) {
+		if (transform.position.y > GameManager.instance.topRight.y && direction.y > 0 ) {
 			direction.y = -direction.y;
 		}
 
-		if (transform.position.x < GameManager.bottomLeft.x) {
+		if (transform.position.x < GameManager.instance.bottomLeft.x) {
 			Object.Destroy(this.gameObject);
-			GameManager.endRound();
+			GameManager.instance.endRound("player2");
 		}
-		if ( transform.position.x > GameManager.topRight.x ) {
+		if ( transform.position.x > GameManager.instance.topRight.x ) {
 			Object.Destroy(this.gameObject);
-			GameManager.endRound();
+			GameManager.instance.endRound("player1");
 		}
 	}
 
