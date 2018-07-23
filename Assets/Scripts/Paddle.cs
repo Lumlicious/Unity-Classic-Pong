@@ -7,7 +7,8 @@ public class Paddle : MonoBehaviour {
 	[SerializeField]
 	float speed;
 
-	private string input;
+	public string input;
+	
 	private float height;
 
 	void Start() {

@@ -20,11 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4077806188209618}
   - component: {fileID: 212053969320308606}
-  - component: {fileID: 61219074367866606}
   - component: {fileID: 114499620842957438}
+  - component: {fileID: 61405359298569844}
+  - component: {fileID: 50816834312779664}
   m_Layer: 0
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,13 +37,33 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244186422673054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.10776455, y: -0.15, z: 0.28295898}
+  m_LocalPosition: {x: 2.402233, y: -0.4091226, z: 0.28295898}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61219074367866606
+--- !u!50 &50816834312779664
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244186422673054}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61405359298569844
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +75,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000000018626451, y: 0.0068948567}
+  m_Offset: {x: 0.0005207062, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -65,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.03170796, y: 0.2006566}
+  m_Size: {x: 0.017292976, y: 0.2}
   m_EdgeRadius: 0
 --- !u!114 &114499620842957438
 MonoBehaviour:
@@ -79,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  input: 
 --- !u!212 &212053969320308606
 SpriteRenderer:
   m_ObjectHideFlags: 1

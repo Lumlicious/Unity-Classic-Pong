@@ -137,7 +137,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - _DestinationResolution: {r: 799, g: 452, b: 0, a: 0}
+    - _DestinationResolution: {r: 588, g: 331, b: 0, a: 0}
 --- !u!1 &668156308
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 89.946526, y: 160}
+  m_ReferenceResolution: {x: 90.07277, y: 160}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 114267850144026154, guid: 7602a2ffa5d2345078e566329ba2a2ff, type: 2}
   paddle: {fileID: 114499620842957438, guid: 346caa0ad8f104a66b914dc295890ce4, type: 2}
-  xOffset: 20
+  xOffset: 0.1
   player1Score: 0
   player2Score: 0
 --- !u!4 &1859508588
@@ -382,8 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88f1386dd63147198d003daff00d37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenResolution: {x: 799, y: 452}
-  internalResolution: {x: 283, y: 160}
+  screenResolution: {x: 588, y: 331}
+  internalResolution: {x: 284, y: 160}
   upscaledResolution: {x: 0, y: 0}
   smooth: 0
   forceSquarePixels: 0
